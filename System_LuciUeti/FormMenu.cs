@@ -30,5 +30,12 @@ namespace System_LuciUeti
             formFestasCadastradas nn = new formFestasCadastradas();
             nn.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCadFunc nn = new FormCadFunc();
+            nn.Show();
+        }
     }
 }

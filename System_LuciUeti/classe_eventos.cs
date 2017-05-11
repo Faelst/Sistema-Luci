@@ -8,7 +8,12 @@ namespace System_LuciUeti
 {
     public class classe_eventos
     {
-       public int nContrato, tel_principal_contrato, tel_recado_contrato, cep_contrato, nCasa_contrato, qtde_convidados;
+        public int nContrato { get; set; }
+        public int tel_principal_contrato { get; set; }
+        public int tel_recado_contrato { get; set; }
+        public int cep_contrato { get; set; }
+        public int nCasa_contrato { get; set; }
+        public int qtde_convidados {get; set;}
        public string nome_contrato { get; set; }
        public string cpf_contrato { get; set; }        
        public string rg_contrato { get; set; }
@@ -18,9 +23,13 @@ namespace System_LuciUeti
         public string horario_evento_inicio { get; set; }
         public string horario_evento_termino { get; set; }
         public string obs_evento { get; set; }
-        public char email_contrato { get; set; }
+        public string email_contrato { get; set; }
         public double valor_pessoa_contrato { get; set; }
         public double valor_total_contrato { get; set; }
+        public int id_contrato { get; set;}
+        public DateTime data { get; set; }
+        public DateTime data_evento { get; set; }
+
 
     }
 }

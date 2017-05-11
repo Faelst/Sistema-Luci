@@ -1,0 +1,12 @@
+alteraçoes:
+Mudei o form cadastro 
+nomiei os componentes do form.
+atribui os dados digitados no form a classe_evento
+
+corrigir erros:
+converçao dos dados para atribuir na classe.
+os dados que nao estao sendo atribuidos corretamente , estao em forma de comentario.
+
+
+Proxima etapa:
+atribuir os dados digitados da data grid view do form CONSUlTAR_EVENTO.

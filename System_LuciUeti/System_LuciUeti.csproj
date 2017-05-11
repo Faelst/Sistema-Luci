@@ -47,11 +47,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classe_eventos.cs" />
+    <Compile Include="classe_funcionario.cs" />
     <Compile Include="FormCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCadastro.Designer.cs">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadFunc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadFunc.Designer.cs">
+      <DependentUpon>FormCadFunc.cs</DependentUpon>
     </Compile>
     <Compile Include="formFestasCadastradas.cs">
       <SubType>Form</SubType>
@@ -75,6 +82,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormCadastro.resx">
       <DependentUpon>FormCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadFunc.resx">
+      <DependentUpon>FormCadFunc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formFestasCadastradas.resx">
       <DependentUpon>formFestasCadastradas.cs</DependentUpon>

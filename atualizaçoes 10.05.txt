@@ -1,0 +1,4 @@
+criaçao do form para cadastrar funcionario.
+criaçao da classe Funcionario.
+
+corrigir erro do cadastro de festa.( erro de caracteres );

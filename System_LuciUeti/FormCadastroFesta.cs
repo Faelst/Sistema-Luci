@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace System_LuciUeti
 {
-    public partial class FormCadastro : Form
+    public partial class FormCadastroFesta : Form
     {
 
-        public FormCadastro()
+        public FormCadastroFesta()
         {
             InitializeComponent();
         }
@@ -28,46 +28,28 @@ namespace System_LuciUeti
 
         public void button1_Click(object sender, EventArgs e)
         {
-            
 
             bool jaExiste = false;
             classe_eventos objEv = new classe_eventos();
-            //Convert.ToInt32(txtNumero_contrato.Text);
-
-
-            
             objEv.nome_contrato = txtNomeContrato.Text;
-            if(txtNumero_contrato.Text == null)
-            {
-                objEv.nContrato = 0;
-            } else
-            {
-                MessageBox.Show(txtNumero_contrato.Text);
-            }
-            //MessageBox.Show(objEv.data.ToString());
-
-            // ( condição IF ) ? (retorno se true) : (retorno se falso)
-            //objEv.data = textBox2.Text.Length > 0 ? Convert.ToDateTime(textBox2.Text) : Convert.ToDateTime(0);
-           // MessageBox.Show(objEv.data.ToString());
-
-            // if(textBox2.Text.Length >0)  objEv.data = Convert.ToDateTime(textBox2.Text);
             objEv.cpf_contrato = txtCpf_contrato.Text;
             objEv.rg_contrato = txtRg_contrato.Text;
-            if(txtTelPrincipal_contrato.Text.Length >0) objEv.tel_principal_contrato = Convert.ToInt32(txtTelPrincipal_contrato.Text);
-
-            objEv.tel_recado_contrato = Convert.ToInt32(txtTelRecado_contrato.Text);
-            objEv.cep_contrato = Convert.ToInt16(txtCpe_contrato.Text);
-            objEv.nCasa_contrato = Convert.ToInt16(txtNCasa_contrato.Text);
-            objEv.email_contrato = txtEmail_contrato.Text;
-            objEv.endereco_contrato = txtend_contrato.Text;
-            objEv.nome_evento = txtNomeDoEvento_contrato.Text;
-            objEv.tipo_festa = comboTipodeFesta_contrato.Text;
-            objEv.valor_pessoa_contrato = Convert.ToDouble(txtValorPessoa_contrato.Text);
-            objEv.valor_total_contrato = Convert.ToDouble(txtValorTotal_contrato.Text);
-            objEv.data_evento = Convert.ToDateTime(datapickeDatadeInicio_contrato.Text);
-            objEv.horario_evento_inicio = txtHorarioInicio.Text;
+            objEv.endereco_contrato = txtEndereco_contrato.Text;
+            objEv.nome_evento = txtNomeEvento_contrato.Text;
+            objEv.tipo_festa = comboBoxTipoFesta_contrato.Text;
+            objEv.horario_evento_inicio = txtHorarioInicio_contrato.Text;
             objEv.horario_evento_termino = txtHorarioTermino_contrato.Text;
             objEv.obs_evento = txtObs_contrato.Text;
+            objEv.email_contrato = txtEmail_contrato.Text;
+            //objEv.valor_pessoa_contrato = Convert.ToDouble(txtValorPessoa_contrato.Text);
+            //objEv.tel_principal_contrato = Convert.ToInt16(txtTel_contrato.Text);
+            //objEv.tel_recado_contrato = Convert.ToInt16(txtTelRecado_contrato);
+            //objEv.cep_contrato = Convert.ToInt16(txtCEP_contrato.Text);
+            //objEv.nCasa_contrato = Convert.ToInt16(txtNcasa_contrato.Text);
+            //objEv.qtde_convidados = Convert.ToInt32(txtQtde_contrato.Text);
+            //objEv.valor_total_contrato = (Convert.ToDouble(txtValorPessoa_contrato.Text) * Convert.ToDouble(txtQtde_contrato.Text));
+
+            MessageBox.Show("Salvo Com Sucesso"," atenção");
 
             for (int i = 0; i < FormLogin.lista.Count; i++)
             {
@@ -103,11 +85,6 @@ namespace System_LuciUeti
         private void button4_Click(object sender, EventArgs e)
         {
           
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
