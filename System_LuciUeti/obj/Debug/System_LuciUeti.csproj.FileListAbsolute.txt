@@ -36,3 +36,16 @@ E:\System_LuciUeti\System_LuciUeti\obj\Debug\System_LuciUeti.FormLogin.resources
 E:\System_LuciUeti\System_LuciUeti\obj\Debug\System_LuciUeti.FormMenu.resources
 E:\System_LuciUeti\System_LuciUeti\obj\Debug\System_LuciUeti.Properties.Resources.resources
 E:\System_LuciUeti\System_LuciUeti\obj\Debug\System_LuciUeti.csproj.GenerateResource.Cache
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\bin\Debug\System_LuciUeti.exe.config
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.exe
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.pdb
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\bin\Debug\System_LuciUeti.exe
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\bin\Debug\System_LuciUeti.pdb
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.csprojResolveAssemblyReference.cache
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.FormCadastro.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.FormCadFunc.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.formFestasCadastradas.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.FormLogin.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.FormMenu.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.Properties.Resources.resources
+C:\Users\Rafael Siverio\Desktop\Sistema-Luci\System_LuciUeti\obj\Debug\System_LuciUeti.csproj.GenerateResource.Cache
