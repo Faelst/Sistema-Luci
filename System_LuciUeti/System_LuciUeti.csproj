@@ -46,13 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classe_contratante.cs" />
     <Compile Include="classe_eventos.cs" />
     <Compile Include="classe_funcionario.cs" />
-    <Compile Include="FormCadastro.cs">
+    <Compile Include="Classe_usuario.cs" />
+    <Compile Include="FormCadastro_contratante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCadastro.Designer.cs">
-      <DependentUpon>FormCadastro.cs</DependentUpon>
+    <Compile Include="FormCadastro_contratante.Designer.cs">
+      <DependentUpon>FormCadastro_contratante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCadastro_evento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCadastro_evento.Designer.cs">
+      <DependentUpon>FormCadastro_evento.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCadFunc.cs">
       <SubType>Form</SubType>
@@ -80,8 +88,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCadastro.resx">
-      <DependentUpon>FormCadastro.cs</DependentUpon>
+    <EmbeddedResource Include="FormCadastro_contratante.resx">
+      <DependentUpon>FormCadastro_contratante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCadastro_evento.resx">
+      <DependentUpon>FormCadastro_evento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCadFunc.resx">
       <DependentUpon>FormCadFunc.cs</DependentUpon>

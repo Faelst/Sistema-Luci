@@ -19,7 +19,7 @@ namespace System_LuciUeti
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCadastro ss = new FormCadastro();
+            FormCadastro_contratante ss = new FormCadastro_contratante();
             ss.Show();
 
         }

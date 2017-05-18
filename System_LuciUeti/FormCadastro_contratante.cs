@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace System_LuciUeti
 {
-    public partial class FormCadastro : Form
+    public partial class FormCadastro_contratante : Form
     {
         private bool a;
 
-        public FormCadastro()
+        public FormCadastro_contratante()
         {
             InitializeComponent();
         }
@@ -39,7 +39,7 @@ namespace System_LuciUeti
             {
                 Boolean a = false;
 
-                objEv.data = Convert.ToDateTime(dateDataDoContrato_contrato.Text);
+                objEv.data_contrato = Convert.ToDateTime(dateDataDoContrato_contrato.Text);
 
 
                 if (txtNomeContrato.Text.Length <= 0)
@@ -56,19 +56,19 @@ namespace System_LuciUeti
 
                 if (txtNumero_contrato.Text.Length <= 0)
                 {
-                    objEv.nContrato = 0;
+                    objEv.id = 0;
                 }
                 else
                 {
                     MessageBox.Show(txtNumero_contrato.Text);
                 }
-                //MessageBox.Show(objEv.data.ToString());
+                //MessageBox.Show(objEv.data_contrato.ToString());
 
                 // ( condição IF ) ? (retorno se true) : (retorno se falso)
-                //objEv.data = textBox2.Text.Length > 0 ? Convert.ToDateTime(textBox2.Text) : Convert.ToDateTime(0);
-                // MessageBox.Show(objEv.data.ToString());
+                //objEv.data_contrato = textBox2.Text.Length > 0 ? Convert.ToDateTime(textBox2.Text) : Convert.ToDateTime(0);
+                // MessageBox.Show(objEv.data_contrato.ToString());
 
-                // if(textBox2.Text.Length >0)  objEv.data = Convert.ToDateTime(textBox2.Text);
+                // if(textBox2.Text.Length >0)  objEv.data_contrato = Convert.ToDateTime(textBox2.Text);
 
                 if (txtCpe_contrato.Text.Length <= 0)
                 {
@@ -189,7 +189,7 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.valor_pessoa_contrato = Convert.ToDouble(txtValorPessoa_contrato.Text);
+                    objEv.valor_pessoa = Convert.ToDouble(txtValorPessoa_contrato.Text);
                 }
 
                 if (txtQtdePessoas_contrato.Text.Length <= 0)
@@ -203,9 +203,9 @@ namespace System_LuciUeti
                     objEv.qtde_convidados = Convert.ToInt16(txtQtdePessoas_contrato.Text);
                 }
 
-                objEv.valor_total_contrato = objEv.qtde_convidados * objEv.valor_pessoa_contrato;
+                objEv.valor_total = objEv.qtde_convidados * objEv.valor_pessoa;
                 //*alocar no banco , antes de ser convertido para STRING;
-                txtValorTotal_contrato.Text = objEv.valor_total_contrato.ToString();
+                txtValorTotal_contrato.Text = objEv.valor_total.ToString();
 
                 if (datapickeDatadeInicio_contrato == null)
                 {
@@ -224,7 +224,7 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.horario_evento_inicio = txtHorarioInicio.Text;
+                    objEv.horario_inicio = txtHorarioInicio.Text;
                 }
 
 
@@ -235,12 +235,12 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.horario_evento_termino = txtHorarioTermino_contrato.Text;
+                    objEv.horario_termino = txtHorarioTermino_contrato.Text;
                 }
 
 
-                    objEv.obs_evento = txtobs_contrato.Text;
-                MessageBox.Show(objEv.obs_evento.ToString());
+                    objEv.obs = txtobs_contrato.Text;
+                MessageBox.Show(objEv.obs.ToString());
                 for (int i = 0; i < FormLogin.lista.Count; i++)
                 {
                     if (FormLogin.lista[i].nome_contrato == objEv.nome_contrato)
