@@ -39,6 +39,8 @@ namespace System_LuciUeti
             {
                 Boolean a = false;
 
+                objEv.data = Convert.ToDateTime(dateDataDoContrato_contrato.Text);
+
 
                 if (txtNomeContrato.Text.Length <= 0)
                 {
@@ -75,18 +77,29 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.cpf_contrato = txtCpf_contrato.Text;
+                    objEv.cep_contrato = Convert.ToInt32(txtCpe_contrato.Text);
                 }
 
-                if (txtRg_contrato.Text == null)
+                if (txtRg_contrato.Text.Length <= 0)
                 {
-                    MessageBox.Show("Digite o CPF corretamente", "ERRO", MessageBoxButtons.OK);
+                    MessageBox.Show("Digite o RG corretamente", "ERRO", MessageBoxButtons.OK);
                     break;
                 }
                 else
                 {
-                    objEv.rg_contrato = txtRg_contrato.Text;
+                    objEv.rg_contrato = txtRG_contrato1.Text;
                 }
+
+                if (txtCpf_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o CPF corretamente.", "ERRO", MessageBoxButtons.OK);
+                    break;
+                }
+                else
+                {
+                    objEv.cpf_contrato = txtCpf_contrato.Text;
+                }
+
 
                 if (txtTelPrincipal_contrato.Text.Length <= 0)
                 {
@@ -95,7 +108,7 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.tel_principal_contrato = Convert.ToInt32(txtTelPrincipal_contrato.Text);
+                    objEv.tel_principal_contrato = txtTelPrincipal_contrato.Text;
                 }
 
                 if (txtTelRecado_contrato.Text.Length <= 0)
@@ -105,8 +118,9 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.tel_recado_contrato = Convert.ToInt32(txtTelRecado_contrato.Text);
+                    objEv.tel_recado_contrato = txtTelRecado_contrato.Text;
                 }
+
 
                 if (txtCpe_contrato.Text.Length <= 0)
                 {
@@ -115,21 +129,118 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.cep_contrato = Convert.ToInt16(txtCpe_contrato.Text);
+                    objEv.cep_contrato = Convert.ToInt32(txtCpe_contrato.Text);
                 }
 
-                objEv.nCasa_contrato = Convert.ToInt16(txtNCasa_contrato.Text);
-                objEv.email_contrato = txtEmail_contrato.Text;
-                objEv.endereco_contrato = txtend_contrato.Text;
-                objEv.nome_evento = txtNomeDoEvento_contrato.Text;
-                objEv.tipo_festa = comboTipodeFesta_contrato.Text;
-                objEv.valor_pessoa_contrato = Convert.ToDouble(txtValorPessoa_contrato.Text);
-                objEv.valor_total_contrato = Convert.ToDouble(txtValorTotal_contrato.Text);
-                objEv.data_evento = Convert.ToDateTime(datapickeDatadeInicio_contrato.Text);
-                objEv.horario_evento_inicio = txtHorarioInicio.Text;
-                objEv.horario_evento_termino = txtHorarioTermino_contrato.Text;
-                objEv.obs_evento = txtObs_contrato.Text;
+                if (txtNCasa_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o NUMERO DA CASA/NUMERO DO APARTAMENTO corretamente", "ERRO", MessageBoxButtons.OK);
+                    break;
+                }
+                else
+                {
+                    objEv.nCasa_contrato = Convert.ToInt32(txtNCasa_contrato.Text);
+                }
 
+                if (txtEmail_contrato.Text.Length <= 0)
+                {
+                    objEv.email_contrato = "Nao contem Email";
+                }
+                else
+                {
+                    objEv.email_contrato = txtEmail_contrato.Text;
+                }
+
+
+                if (txtend_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o ENDEREÇO corretamente", "ERRO", MessageBoxButtons.OK);
+                    break;
+                }
+                else
+                {
+                    objEv.endereco_contrato = txtend_contrato.Text;
+                }
+
+                if (txtNomeDoEvento_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o NOME DO EVENTO/NOME DO ANIVERSSARIANTE corretamente.");
+                    break;
+                }
+                else
+                {
+                    objEv.nome_evento = txtNomeDoEvento_contrato.Text;
+                }
+
+                if (comboTipodeFesta_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Selecione um TIPO DE FESTA.", "ERRO");
+                    break;
+                }
+                else
+                {
+                    objEv.tipo_festa = comboTipodeFesta_contrato.Text;
+                }
+
+                if (txtValorPessoa_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show(" Digite o VALOR POR PESSOA corretamente.");
+                    break;
+                }
+                else
+                {
+                    objEv.valor_pessoa_contrato = Convert.ToDouble(txtValorPessoa_contrato.Text);
+                }
+
+                if (txtQtdePessoas_contrato.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite a QUANTIDADE DE PESSOAS corretamente");
+                    break;
+
+                }
+                else
+                {
+                    objEv.qtde_convidados = Convert.ToInt16(txtQtdePessoas_contrato.Text);
+                }
+
+                objEv.valor_total_contrato = objEv.qtde_convidados * objEv.valor_pessoa_contrato;
+                //*alocar no banco , antes de ser convertido para STRING;
+                txtValorTotal_contrato.Text = objEv.valor_total_contrato.ToString();
+
+                if (datapickeDatadeInicio_contrato == null)
+                {
+                    MessageBox.Show("Digite a DATA DO EVENTO corretamente", "ERRO", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    objEv.data_evento = Convert.ToDateTime(datapickeDatadeInicio_contrato.Text);
+                }
+
+
+                if (txtHorarioInicio.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o HORARIO DE INICIO corretamente", "ERRO", MessageBoxButtons.OK);
+                    break;
+                }
+                else
+                {
+                    objEv.horario_evento_inicio = txtHorarioInicio.Text;
+                }
+
+
+                if (txtHorarioInicio.Text.Length <= 0)
+                {
+                    MessageBox.Show("Digite o HORARIO DE INICIO corretamente", "ERRO", MessageBoxButtons.OK);
+                    break;
+                }
+                else
+                {
+                    objEv.horario_evento_termino = txtHorarioTermino_contrato.Text;
+                }
+
+
+                    objEv.obs_evento = txtobs_contrato.Text;
+                MessageBox.Show(objEv.obs_evento.ToString());
                 for (int i = 0; i < FormLogin.lista.Count; i++)
                 {
                     if (FormLogin.lista[i].nome_contrato == objEv.nome_contrato)
@@ -162,6 +273,7 @@ namespace System_LuciUeti
                 */
                 a = true;
             } while (a == true);
+            MessageBox.Show("CONTRATO SALVO.", "ATENÇÃO", MessageBoxButtons.OK);
             } 
 
         private void button4_Click(object sender, EventArgs e)

@@ -33,7 +33,7 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSavar = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
-            this.txtObs_contrato = new System.Windows.Forms.TextBox();
+            this.txtobs_contrato = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtValorTotal_contrato = new System.Windows.Forms.Label();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -77,10 +77,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.txtHorarioTermino_contrato = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtDataContrato_contrato = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtRG_contrato1 = new System.Windows.Forms.TextBox();
             this.txtRg_contrato = new System.Windows.Forms.Label();
+            this.dateDataDoContrato_contrato = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnImprimir
@@ -122,14 +122,14 @@
             this.label27.TabIndex = 44;
             this.label27.Text = "Obs :";
             // 
-            // txtObs_contrato
+            // txtobs_contrato
             // 
-            this.txtObs_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObs_contrato.Location = new System.Drawing.Point(26, 594);
-            this.txtObs_contrato.Multiline = true;
-            this.txtObs_contrato.Name = "txtObs_contrato";
-            this.txtObs_contrato.Size = new System.Drawing.Size(608, 61);
-            this.txtObs_contrato.TabIndex = 45;
+            this.txtobs_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtobs_contrato.Location = new System.Drawing.Point(26, 594);
+            this.txtobs_contrato.Multiline = true;
+            this.txtobs_contrato.Name = "txtobs_contrato";
+            this.txtobs_contrato.Size = new System.Drawing.Size(608, 61);
+            this.txtobs_contrato.TabIndex = 45;
             // 
             // label25
             // 
@@ -540,14 +540,6 @@
             this.txtHorarioTermino_contrato.TabIndex = 82;
             this.txtHorarioTermino_contrato.Text = "__ : __";
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(170, 53);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(129, 20);
-            this.textBox2.TabIndex = 84;
-            // 
             // txtDataContrato_contrato
             // 
             this.txtDataContrato_contrato.AutoSize = true;
@@ -559,13 +551,13 @@
             this.txtDataContrato_contrato.TabIndex = 83;
             this.txtDataContrato_contrato.Text = "Data do Contrato:";
             // 
-            // textBox4
+            // txtRG_contrato1
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(329, 151);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(234, 20);
-            this.textBox4.TabIndex = 86;
+            this.txtRG_contrato1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG_contrato1.Location = new System.Drawing.Point(329, 151);
+            this.txtRG_contrato1.Name = "txtRG_contrato1";
+            this.txtRG_contrato1.Size = new System.Drawing.Size(234, 20);
+            this.txtRG_contrato1.TabIndex = 86;
             // 
             // txtRg_contrato
             // 
@@ -577,15 +569,22 @@
             this.txtRg_contrato.TabIndex = 85;
             this.txtRg_contrato.Text = "RG:";
             // 
+            // dateDataDoContrato_contrato
+            // 
+            this.dateDataDoContrato_contrato.Location = new System.Drawing.Point(170, 53);
+            this.dateDataDoContrato_contrato.Name = "dateDataDoContrato_contrato";
+            this.dateDataDoContrato_contrato.Size = new System.Drawing.Size(200, 20);
+            this.dateDataDoContrato_contrato.TabIndex = 87;
+            // 
             // FormCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(826, 660);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dateDataDoContrato_contrato);
+            this.Controls.Add(this.txtRG_contrato1);
             this.Controls.Add(this.txtRg_contrato);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txtDataContrato_contrato);
             this.Controls.Add(this.txtHorarioTermino_contrato);
             this.Controls.Add(this.btnLimpar);
@@ -593,7 +592,7 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSavar);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.txtObs_contrato);
+            this.Controls.Add(this.txtobs_contrato);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txtValorTotal_contrato);
             this.Controls.Add(this.textBox19);
@@ -649,7 +648,7 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnSavar;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox txtObs_contrato;
+        private System.Windows.Forms.TextBox txtobs_contrato;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label txtValorTotal_contrato;
         private System.Windows.Forms.TextBox textBox19;
@@ -693,9 +692,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.TextBox txtHorarioTermino_contrato;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label txtDataContrato_contrato;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtRG_contrato1;
         private System.Windows.Forms.Label txtRg_contrato;
+        private System.Windows.Forms.DateTimePicker dateDataDoContrato_contrato;
     }
 }

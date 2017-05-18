@@ -9,8 +9,8 @@ namespace System_LuciUeti
     public class classe_eventos
     {
         public int nContrato { get; set; }
-        public int tel_principal_contrato { get; set; }
-        public int tel_recado_contrato { get; set; }
+        public string tel_principal_contrato { get; set; }
+        public string tel_recado_contrato { get; set; }
         public int cep_contrato { get; set; }
         public int nCasa_contrato { get; set; }
         public int qtde_convidados {get; set;}
