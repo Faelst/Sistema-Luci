@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Security">
+      <HintPath>F:\Alunos\Wolley\Ambientes Visuais\SI 3A\Aula 08\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>F:\Alunos\Wolley\Ambientes Visuais\SI 3A\Aula 08\Npgsql.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,6 +56,7 @@
     <Compile Include="classe_eventos.cs" />
     <Compile Include="classe_funcionario.cs" />
     <Compile Include="Classe_usuario.cs" />
+    <Compile Include="ConectaDb.cs" />
     <Compile Include="FormCadastro_contratante.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -20,10 +20,10 @@ namespace System_LuciUeti
             
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-          
-                this.Hide();
-                FormMenu ss = new FormMenu();
-                ss.Show();
-            }
+            Classe_usuario usuario = Classe_usuario.Logar(boxUsuario.Text, boxSenha.Text);
+            this.Hide();
+            FormMenu ss = new FormMenu();
+            ss.Show();
+        }
     }
 }

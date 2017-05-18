@@ -37,9 +37,11 @@ namespace System_LuciUeti
 
             do
             {
+                /*
                 Boolean a = false;
 
-                objEv.data_contrato = Convert.ToDateTime(dateDataDoContrato_contrato.Text);
+                objEv.data_contrato = Convert.ToDateTime(
+                    dateDataDoContrato_contrato.Text);
 
 
                 if (txtNomeContrato.Text.Length <= 0)
@@ -51,8 +53,8 @@ namespace System_LuciUeti
                 }
                 else
                 {
-                    objEv.nome_contrato = txtNomeContrato.Text;
-                }
+                    objEv.nome = txtNomeContrato.Text;
+                }*/
 
                 if (txtNumero_contrato.Text.Length <= 0)
                 {
@@ -70,37 +72,37 @@ namespace System_LuciUeti
 
                 // if(textBox2.Text.Length >0)  objEv.data_contrato = Convert.ToDateTime(textBox2.Text);
 
-                if (txtCpe_contrato.Text.Length <= 0)
-                {
-                    MessageBox.Show("Digite o CEP corretamente.", "ERRO", MessageBoxButtons.OK);
-                    break;
-                }
-                else
-                {
-                    objEv.cep_contrato = Convert.ToInt32(txtCpe_contrato.Text);
-                }
+               // if (txtCpe_contrato.Text.Length <= 0)
+               // {
+              //      MessageBox.Show("Digite o CEP corretamente.", "ERRO", MessageBoxButtons.OK);
+              //      break;
+             //   }
+              //  else
+              //  {
+             //       objEv.cep_contrato = Convert.ToInt32(txtCpe_contrato.Text);
+            //    }
 
-                if (txtRg_contrato.Text.Length <= 0)
-                {
-                    MessageBox.Show("Digite o RG corretamente", "ERRO", MessageBoxButtons.OK);
-                    break;
-                }
-                else
-                {
-                    objEv.rg_contrato = txtRG_contrato1.Text;
-                }
+             //   if (txtRg_contrato.Text.Length <= 0)
+             //   {
+             //       MessageBox.Show("Digite o RG corretamente", "ERRO", MessageBoxButtons.OK);
+            //        break;
+           //     }
+             //   else
+              //  {
+             //       objEv.rg_contrato = txtRG_contrato1.Text;
+            //    }
 
-                if (txtCpf_contrato.Text.Length <= 0)
-                {
-                    MessageBox.Show("Digite o CPF corretamente.", "ERRO", MessageBoxButtons.OK);
-                    break;
-                }
-                else
-                {
-                    objEv.cpf_contrato = txtCpf_contrato.Text;
-                }
-
-
+             //   if (txtCpf_contrato.Text.Length <= 0)
+             //   {
+             //       MessageBox.Show("Digite o CPF corretamente.", "ERRO", MessageBoxButtons.OK);
+             //       break;
+             //   }
+             //   else
+              //  {
+             //       objEv.cpf_contrato = txtCpf_contrato.Text;
+              //  }
+              
+                /*
                 if (txtTelPrincipal_contrato.Text.Length <= 0)
                 {
                     MessageBox.Show(" Digite o telefone Corretamento. Ex: 12911111111", "ERRO", MessageBoxButtons.OK);
@@ -248,7 +250,7 @@ namespace System_LuciUeti
                         jaExiste = true;
                     }
                 }
-
+                */
 
                 if (jaExiste == false)
                 {
