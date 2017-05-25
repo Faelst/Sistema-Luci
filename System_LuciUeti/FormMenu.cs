@@ -19,7 +19,7 @@ namespace System_LuciUeti
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCadastro_contratante ss = new FormCadastro_contratante();
+           FormCadastro_evento ss = new FormCadastro_evento();
             ss.Show();
 
         }
@@ -27,15 +27,23 @@ namespace System_LuciUeti
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            formFestasCadastradas nn = new formFestasCadastradas();
-            nn.Show();
+            formFestasCadastradas n = new formFestasCadastradas();
+            n.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            FormCadFunc nn = new FormCadFunc();
+            formFestasCadastradas n = new formFestasCadastradas();
+            n.Show();
+        }
+
+        private void btnCadContratante_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormCadastro_contratante nn = new FormCadastro_contratante();
             nn.Show();
+
         }
     }
 }

@@ -36,7 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnCadContratante = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,14 +108,15 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Luci Ueti Eventos.";
             // 
-            // button5
+            // btnCadContratante
             // 
-            this.button5.Location = new System.Drawing.Point(12, 110);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(229, 25);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Cadastrar evento";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnCadContratante.Location = new System.Drawing.Point(12, 110);
+            this.btnCadContratante.Name = "btnCadContratante";
+            this.btnCadContratante.Size = new System.Drawing.Size(229, 25);
+            this.btnCadContratante.TabIndex = 16;
+            this.btnCadContratante.Text = "Cadastrar Contratante";
+            this.btnCadContratante.UseVisualStyleBackColor = true;
+            this.btnCadContratante.Click += new System.EventHandler(this.btnCadContratante_Click);
             // 
             // FormMenu
             // 
@@ -123,7 +124,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(257, 299);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnCadContratante);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
@@ -148,7 +149,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCadContratante;
     }
 }
 

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadastro_evento));
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textNumConvidados = new System.Windows.Forms.TextBox();
             this.dateDataDoContrato_contrato = new System.Windows.Forms.DateTimePicker();
             this.txtDataContrato_contrato = new System.Windows.Forms.Label();
             this.txtHorarioTermino_contrato = new System.Windows.Forms.TextBox();
@@ -38,12 +38,12 @@
             this.txtobs_contrato = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.txtValorTotal_contrato = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.textValorTotal = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.txtValorPessoa_contrato = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.txtQtdePessoas_contrato = new System.Windows.Forms.TextBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtHorarioInicio = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -59,29 +59,40 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSavar = new System.Windows.Forms.Button();
+            this.textPequisaNomeCliente = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtMinutoInicio = new System.Windows.Forms.TextBox();
+            this.txtMinutoTermino_contrato = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(517, 146);
+            this.label20.Location = new System.Drawing.Point(521, 323);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(115, 13);
             this.label20.TabIndex = 116;
             this.label20.Text = "Qtde Conviodados:";
             // 
-            // textBox2
+            // textNumConvidados
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(520, 163);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(103, 20);
-            this.textBox2.TabIndex = 117;
+            this.textNumConvidados.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textNumConvidados.Location = new System.Drawing.Point(524, 340);
+            this.textNumConvidados.Name = "textNumConvidados";
+            this.textNumConvidados.Size = new System.Drawing.Size(103, 20);
+            this.textNumConvidados.TabIndex = 117;
             // 
             // dateDataDoContrato_contrato
             // 
-            this.dateDataDoContrato_contrato.Location = new System.Drawing.Point(192, 48);
+            this.dateDataDoContrato_contrato.Location = new System.Drawing.Point(15, 225);
             this.dateDataDoContrato_contrato.Name = "dateDataDoContrato_contrato";
             this.dateDataDoContrato_contrato.Size = new System.Drawing.Size(200, 20);
             this.dateDataDoContrato_contrato.TabIndex = 115;
@@ -91,7 +102,7 @@
             this.txtDataContrato_contrato.AutoSize = true;
             this.txtDataContrato_contrato.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.txtDataContrato_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDataContrato_contrato.Location = new System.Drawing.Point(189, 32);
+            this.txtDataContrato_contrato.Location = new System.Drawing.Point(12, 209);
             this.txtDataContrato_contrato.Name = "txtDataContrato_contrato";
             this.txtDataContrato_contrato.Size = new System.Drawing.Size(108, 13);
             this.txtDataContrato_contrato.TabIndex = 114;
@@ -100,7 +111,7 @@
             // txtHorarioTermino_contrato
             // 
             this.txtHorarioTermino_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarioTermino_contrato.Location = new System.Drawing.Point(287, 242);
+            this.txtHorarioTermino_contrato.Location = new System.Drawing.Point(291, 419);
             this.txtHorarioTermino_contrato.Name = "txtHorarioTermino_contrato";
             this.txtHorarioTermino_contrato.Size = new System.Drawing.Size(43, 20);
             this.txtHorarioTermino_contrato.TabIndex = 113;
@@ -110,7 +121,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(8, 249);
+            this.label27.Location = new System.Drawing.Point(12, 426);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(37, 13);
             this.label27.TabIndex = 110;
@@ -119,7 +130,7 @@
             // txtobs_contrato
             // 
             this.txtobs_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtobs_contrato.Location = new System.Drawing.Point(11, 268);
+            this.txtobs_contrato.Location = new System.Drawing.Point(15, 445);
             this.txtobs_contrato.Multiline = true;
             this.txtobs_contrato.Name = "txtobs_contrato";
             this.txtobs_contrato.Size = new System.Drawing.Size(608, 61);
@@ -129,7 +140,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(496, 246);
+            this.label25.Location = new System.Drawing.Point(500, 423);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(23, 13);
             this.label25.TabIndex = 103;
@@ -139,25 +150,25 @@
             // 
             this.txtValorTotal_contrato.AutoSize = true;
             this.txtValorTotal_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorTotal_contrato.Location = new System.Drawing.Point(517, 226);
+            this.txtValorTotal_contrato.Location = new System.Drawing.Point(521, 403);
             this.txtValorTotal_contrato.Name = "txtValorTotal_contrato";
             this.txtValorTotal_contrato.Size = new System.Drawing.Size(73, 13);
             this.txtValorTotal_contrato.TabIndex = 104;
             this.txtValorTotal_contrato.Text = "Valor Total:";
             // 
-            // textBox19
+            // textValorTotal
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.Location = new System.Drawing.Point(520, 243);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(99, 20);
-            this.textBox19.TabIndex = 102;
+            this.textValorTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textValorTotal.Location = new System.Drawing.Point(524, 420);
+            this.textValorTotal.Name = "textValorTotal";
+            this.textValorTotal.Size = new System.Drawing.Size(99, 20);
+            this.textValorTotal.TabIndex = 102;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(496, 206);
+            this.label24.Location = new System.Drawing.Point(500, 383);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(23, 13);
             this.label24.TabIndex = 100;
@@ -167,7 +178,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(517, 186);
+            this.label23.Location = new System.Drawing.Point(521, 363);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(102, 13);
             this.label23.TabIndex = 99;
@@ -176,34 +187,37 @@
             // txtValorPessoa_contrato
             // 
             this.txtValorPessoa_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValorPessoa_contrato.Location = new System.Drawing.Point(520, 203);
+            this.txtValorPessoa_contrato.Location = new System.Drawing.Point(524, 380);
             this.txtValorPessoa_contrato.Name = "txtValorPessoa_contrato";
             this.txtValorPessoa_contrato.Size = new System.Drawing.Size(99, 20);
             this.txtValorPessoa_contrato.TabIndex = 101;
+            this.txtValorPessoa_contrato.TextChanged += new System.EventHandler(this.txtValorPessoa_contrato_TextChanged);
             // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(11, 32);
+            this.label22.Location = new System.Drawing.Point(15, 124);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(74, 13);
             this.label22.TabIndex = 97;
             this.label22.Text = "Id Contrato:";
             // 
-            // txtQtdePessoas_contrato
+            // txtIdCliente
             // 
-            this.txtQtdePessoas_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtdePessoas_contrato.Location = new System.Drawing.Point(14, 49);
-            this.txtQtdePessoas_contrato.Name = "txtQtdePessoas_contrato";
-            this.txtQtdePessoas_contrato.Size = new System.Drawing.Size(103, 20);
-            this.txtQtdePessoas_contrato.TabIndex = 98;
+            this.txtIdCliente.Enabled = false;
+            this.txtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCliente.Location = new System.Drawing.Point(18, 140);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.ReadOnly = true;
+            this.txtIdCliente.Size = new System.Drawing.Size(92, 20);
+            this.txtIdCliente.TabIndex = 98;
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(284, 226);
+            this.label21.Location = new System.Drawing.Point(288, 403);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(175, 13);
             this.label21.TabIndex = 109;
@@ -212,7 +226,7 @@
             // txtHorarioInicio
             // 
             this.txtHorarioInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorarioInicio.Location = new System.Drawing.Point(287, 203);
+            this.txtHorarioInicio.Location = new System.Drawing.Point(291, 380);
             this.txtHorarioInicio.Name = "txtHorarioInicio";
             this.txtHorarioInicio.Size = new System.Drawing.Size(44, 20);
             this.txtHorarioInicio.TabIndex = 108;
@@ -222,7 +236,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(284, 187);
+            this.label18.Location = new System.Drawing.Point(288, 364);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(161, 13);
             this.label18.TabIndex = 107;
@@ -230,7 +244,7 @@
             // 
             // datapickeDatadeInicio_contrato
             // 
-            this.datapickeDatadeInicio_contrato.Location = new System.Drawing.Point(14, 203);
+            this.datapickeDatadeInicio_contrato.Location = new System.Drawing.Point(18, 380);
             this.datapickeDatadeInicio_contrato.Name = "datapickeDatadeInicio_contrato";
             this.datapickeDatadeInicio_contrato.Size = new System.Drawing.Size(231, 20);
             this.datapickeDatadeInicio_contrato.TabIndex = 106;
@@ -239,7 +253,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(11, 187);
+            this.label17.Location = new System.Drawing.Point(15, 364);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(100, 13);
             this.label17.TabIndex = 105;
@@ -249,7 +263,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(8, 81);
+            this.label16.Location = new System.Drawing.Point(12, 258);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(105, 13);
             this.label16.TabIndex = 93;
@@ -259,7 +273,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(8, 132);
+            this.label15.Location = new System.Drawing.Point(12, 309);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(98, 13);
             this.label15.TabIndex = 95;
@@ -274,7 +288,7 @@
             "15 anos",
             "Almoço/Jantar",
             "Outros"});
-            this.comboTipodeFesta_contrato.Location = new System.Drawing.Point(11, 148);
+            this.comboTipodeFesta_contrato.Location = new System.Drawing.Point(15, 325);
             this.comboTipodeFesta_contrato.Name = "comboTipodeFesta_contrato";
             this.comboTipodeFesta_contrato.Size = new System.Drawing.Size(121, 21);
             this.comboTipodeFesta_contrato.TabIndex = 96;
@@ -283,16 +297,16 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(8, 7);
+            this.label13.Location = new System.Drawing.Point(15, 95);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(128, 16);
+            this.label13.Size = new System.Drawing.Size(148, 16);
             this.label13.TabIndex = 92;
-            this.label13.Text = "Dados do Evento";
+            this.label13.Text = "Cliente Selecionado";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(-16, 9);
+            this.label14.Location = new System.Drawing.Point(-9, 97);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(1327, 13);
             this.label14.TabIndex = 112;
@@ -301,14 +315,14 @@
             // txtNomeDoEvento_contrato
             // 
             this.txtNomeDoEvento_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeDoEvento_contrato.Location = new System.Drawing.Point(11, 100);
+            this.txtNomeDoEvento_contrato.Location = new System.Drawing.Point(15, 277);
             this.txtNomeDoEvento_contrato.Name = "txtNomeDoEvento_contrato";
             this.txtNomeDoEvento_contrato.Size = new System.Drawing.Size(608, 20);
             this.txtNomeDoEvento_contrato.TabIndex = 94;
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(657, 97);
+            this.btnLimpar.Location = new System.Drawing.Point(661, 274);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(121, 47);
             this.btnLimpar.TabIndex = 121;
@@ -317,7 +331,7 @@
             // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(657, 159);
+            this.btnImprimir.Location = new System.Drawing.Point(661, 336);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(121, 47);
             this.btnImprimir.TabIndex = 118;
@@ -326,33 +340,149 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(657, 293);
+            this.btnVoltar.Location = new System.Drawing.Point(661, 470);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(121, 47);
             this.btnVoltar.TabIndex = 120;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // btnSavar
             // 
-            this.btnSavar.Location = new System.Drawing.Point(657, 226);
+            this.btnSavar.Location = new System.Drawing.Point(661, 403);
             this.btnSavar.Name = "btnSavar";
             this.btnSavar.Size = new System.Drawing.Size(121, 47);
             this.btnSavar.TabIndex = 119;
             this.btnSavar.Text = "Salvar";
             this.btnSavar.UseVisualStyleBackColor = true;
+            this.btnSavar.Click += new System.EventHandler(this.btnSavar_Click);
+            // 
+            // textPequisaNomeCliente
+            // 
+            this.textPequisaNomeCliente.Location = new System.Drawing.Point(18, 56);
+            this.textPequisaNomeCliente.Name = "textPequisaNomeCliente";
+            this.textPequisaNomeCliente.Size = new System.Drawing.Size(283, 20);
+            this.textPequisaNomeCliente.TabIndex = 122;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(356, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 34);
+            this.button1.TabIndex = 123;
+            this.button1.Text = "Pesquisar Cliente";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtNomeCliente
+            // 
+            this.txtNomeCliente.Enabled = false;
+            this.txtNomeCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeCliente.Location = new System.Drawing.Point(148, 140);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.ReadOnly = true;
+            this.txtNomeCliente.Size = new System.Drawing.Size(378, 20);
+            this.txtNomeCliente.TabIndex = 124;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(-259, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(128, 16);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "Dados do Evento";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-283, 184);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1327, 13);
+            this.label2.TabIndex = 126;
+            this.label2.Text = resources.GetString("label2.Text");
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(145, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 13);
+            this.label3.TabIndex = 127;
+            this.label3.Text = "Nome do Cliente:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(-299, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1327, 13);
+            this.label4.TabIndex = 128;
+            this.label4.Text = resources.GetString("label4.Text");
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(15, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 16);
+            this.label5.TabIndex = 129;
+            this.label5.Text = "Selecionar Cliente";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(15, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 16);
+            this.label6.TabIndex = 130;
+            this.label6.Text = "Dados Do Evento";
+            // 
+            // txtMinutoInicio
+            // 
+            this.txtMinutoInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMinutoInicio.Location = new System.Drawing.Point(341, 380);
+            this.txtMinutoInicio.Name = "txtMinutoInicio";
+            this.txtMinutoInicio.Size = new System.Drawing.Size(44, 20);
+            this.txtMinutoInicio.TabIndex = 131;
+            this.txtMinutoInicio.Text = "__ : __";
+            // 
+            // txtMinutoTermino_contrato
+            // 
+            this.txtMinutoTermino_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMinutoTermino_contrato.Location = new System.Drawing.Point(342, 419);
+            this.txtMinutoTermino_contrato.Name = "txtMinutoTermino_contrato";
+            this.txtMinutoTermino_contrato.Size = new System.Drawing.Size(43, 20);
+            this.txtMinutoTermino_contrato.TabIndex = 132;
+            this.txtMinutoTermino_contrato.Text = "__ : __";
             // 
             // FormCadastro_evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 356);
+            this.ClientSize = new System.Drawing.Size(790, 519);
+            this.Controls.Add(this.txtMinutoTermino_contrato);
+            this.Controls.Add(this.txtMinutoInicio);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtNomeCliente);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textPequisaNomeCliente);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSavar);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textNumConvidados);
             this.Controls.Add(this.dateDataDoContrato_contrato);
             this.Controls.Add(this.txtDataContrato_contrato);
             this.Controls.Add(this.txtHorarioTermino_contrato);
@@ -360,12 +490,12 @@
             this.Controls.Add(this.txtobs_contrato);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txtValorTotal_contrato);
-            this.Controls.Add(this.textBox19);
+            this.Controls.Add(this.textValorTotal);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.txtValorPessoa_contrato);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.txtQtdePessoas_contrato);
+            this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtHorarioInicio);
             this.Controls.Add(this.label18);
@@ -387,7 +517,7 @@
         #endregion
 
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textNumConvidados;
         private System.Windows.Forms.DateTimePicker dateDataDoContrato_contrato;
         private System.Windows.Forms.Label txtDataContrato_contrato;
         private System.Windows.Forms.TextBox txtHorarioTermino_contrato;
@@ -395,12 +525,12 @@
         private System.Windows.Forms.TextBox txtobs_contrato;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label txtValorTotal_contrato;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox textValorTotal;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtValorPessoa_contrato;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtQtdePessoas_contrato;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtHorarioInicio;
         private System.Windows.Forms.Label label18;
@@ -416,5 +546,16 @@
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnSavar;
+        private System.Windows.Forms.TextBox textPequisaNomeCliente;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtNomeCliente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtMinutoInicio;
+        private System.Windows.Forms.TextBox txtMinutoTermino_contrato;
     }
 }

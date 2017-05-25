@@ -22,7 +22,8 @@ namespace System_LuciUeti
             try
             {
                 conexao = new ConectaDB().getConexao();
-                string sql = "SELECT usuario FROM usuario WHERE usuario.nome = " + nome +" and usuario.senha = " + senha;
+                //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
+                string sql = "SELECT * FROM usuario WHERE nome = 'fael' and senha = '123'";
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -32,6 +33,7 @@ namespace System_LuciUeti
                     usuario.nome = dr["nome"].ToString();
                     usuario.senha = dr["senha"].ToString();
                 }
+                conexao.Close();
             }
             catch (Exception ex)
             {

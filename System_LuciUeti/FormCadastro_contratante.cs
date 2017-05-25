@@ -283,9 +283,29 @@ namespace System_LuciUeti
           
         }
 
-        private void textBox13_TextChanged(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
+            string nome = txtNomeContrato.Text;
+            string email = txtEmail_contrato.Text;
+            DateTime nascimento = Convert.ToDateTime(txtDataNasc_contrato.Text);
+            string cpf = txtCpf_contrato.Text;
+            string rg = txtRG_contrato1.Text;
+            string endereco = txtend_contrato.Text + " Nº " + txtNCasa_contrato.Text;
+            string complemento = textComplementoCont.Text;
+            string cep = txtCep_contrato.Text;
+            string telefone = txtTelPrincipal_contrato.Text;
+            string tel_recado = txtTelRecado_contrato.Text;
 
+            Classe_contratante cont = new Classe_contratante(nome, email, nascimento, cpf, rg, endereco, complemento, cep, telefone, tel_recado);
+
+            cont.save();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMenu a = new FormMenu();
+            a.Show();
         }
     }
 }

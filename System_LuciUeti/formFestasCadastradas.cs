@@ -12,17 +12,25 @@ namespace System_LuciUeti
 {
     public partial class formFestasCadastradas : Form
     {
-        
+        public static List<classe_eventos> eventos_carregados;
         public formFestasCadastradas()
         {
-            /*
+            
             InitializeComponent();
-            for (int i = 0; i < FormLogin.lista.Count; i++)
-            { 
-                string[] nova_linha = {FormLogin.lista[i].id.ToString() ,  FormLogin.lista[i].nome_contrato , FormLogin.lista[i].data_contrato.ToString() , FormLogin.lista[i].cpf_contrato.ToString(), FormLogin.lista[i].rg_contrato.ToString() , FormLogin.lista[i].tel_principal_contrato.ToString(),FormLogin.lista[i].tel_recado_contrato.ToString(), FormLogin.lista[i].cep_contrato.ToString() , FormLogin.lista[i].nCasa_contrato.ToString(), FormLogin.lista[i].email_contrato.ToString(), FormLogin.lista[i].endereco_contrato.ToString(), FormLogin.lista[i].nome_evento.ToString(), FormLogin.lista[i].tipo_festa.ToString() , FormLogin.lista[i].valor_pessoa.ToString() , FormLogin.lista[i].valor_total.ToString(), FormLogin.lista[i].data_evento.ToString(), FormLogin.lista[i].horario_inicio.ToString(), FormLogin.lista[i].horario_termino.ToString() , FormLogin.lista[i].obs.ToString() };
-                dgvContrato.Rows.Add(nova_linha);
+            formFestasCadastradas.eventos_carregados = classe_eventos.buscar();
 
-            }*/
+            List<classe_eventos> simple = formFestasCadastradas.eventos_carregados;
+
+
+            for (int i = 0; i < simple.Count; i++)
+            {
+
+                string[] nova_linha = {
+                    simple[i].id.ToString(),
+                    simple[i].nome,
+                };
+                dvg_dadosEvento.Rows.Add(nova_linha);
+            }
         }
 
         private void dgvContrato_CellContentClick(object sender, DataGridViewCellEventArgs e)

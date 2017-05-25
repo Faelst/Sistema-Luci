@@ -37,7 +37,7 @@
             this.txtend_contrato = new System.Windows.Forms.TextBox();
             this.txtDataNasc_contrato = new System.Windows.Forms.TextBox();
             this.txtNCasa_contrato = new System.Windows.Forms.TextBox();
-            this.txtCpe_contrato = new System.Windows.Forms.TextBox();
+            this.txtCep_contrato = new System.Windows.Forms.TextBox();
             this.txtCpf_contrato = new System.Windows.Forms.TextBox();
             this.txtTelPrincipal_contrato = new System.Windows.Forms.TextBox();
             this.txtTelRecado_contrato = new System.Windows.Forms.TextBox();
@@ -54,7 +54,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtRG_contrato1 = new System.Windows.Forms.TextBox();
             this.txtRg_contrato = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textComplementoCont = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -130,7 +130,6 @@
             this.txtDataNasc_contrato.Name = "txtDataNasc_contrato";
             this.txtDataNasc_contrato.Size = new System.Drawing.Size(129, 20);
             this.txtDataNasc_contrato.TabIndex = 6;
-            this.txtDataNasc_contrato.TextChanged += new System.EventHandler(this.textBox13_TextChanged);
             // 
             // txtNCasa_contrato
             // 
@@ -140,13 +139,13 @@
             this.txtNCasa_contrato.Size = new System.Drawing.Size(62, 20);
             this.txtNCasa_contrato.TabIndex = 18;
             // 
-            // txtCpe_contrato
+            // txtCep_contrato
             // 
-            this.txtCpe_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpe_contrato.Location = new System.Drawing.Point(25, 348);
-            this.txtCpe_contrato.Name = "txtCpe_contrato";
-            this.txtCpe_contrato.Size = new System.Drawing.Size(169, 20);
-            this.txtCpe_contrato.TabIndex = 20;
+            this.txtCep_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep_contrato.Location = new System.Drawing.Point(25, 348);
+            this.txtCep_contrato.Name = "txtCep_contrato";
+            this.txtCep_contrato.Size = new System.Drawing.Size(169, 20);
+            this.txtCep_contrato.TabIndex = 20;
             // 
             // txtCpf_contrato
             // 
@@ -297,13 +296,13 @@
             this.txtRg_contrato.TabIndex = 85;
             this.txtRg_contrato.Text = "RG:";
             // 
-            // textBox1
+            // textComplementoCont
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(238, 348);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(407, 20);
-            this.textBox1.TabIndex = 88;
+            this.textComplementoCont.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textComplementoCont.Location = new System.Drawing.Point(238, 348);
+            this.textComplementoCont.Name = "textComplementoCont";
+            this.textComplementoCont.Size = new System.Drawing.Size(407, 20);
+            this.textComplementoCont.TabIndex = 88;
             // 
             // label19
             // 
@@ -341,6 +340,7 @@
             this.button3.TabIndex = 94;
             this.button3.Text = "Voltar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -350,6 +350,7 @@
             this.button4.TabIndex = 93;
             this.button4.Text = "Salvar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // FormCadastro_contratante
             // 
@@ -362,7 +363,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textComplementoCont);
             this.Controls.Add(this.txtRG_contrato1);
             this.Controls.Add(this.txtRg_contrato);
             this.Controls.Add(this.label14);
@@ -373,7 +374,7 @@
             this.Controls.Add(this.txtend_contrato);
             this.Controls.Add(this.txtDataNasc_contrato);
             this.Controls.Add(this.txtNCasa_contrato);
-            this.Controls.Add(this.txtCpe_contrato);
+            this.Controls.Add(this.txtCep_contrato);
             this.Controls.Add(this.txtCpf_contrato);
             this.Controls.Add(this.txtTelPrincipal_contrato);
             this.Controls.Add(this.txtTelRecado_contrato);
@@ -405,7 +406,7 @@
         private System.Windows.Forms.TextBox txtend_contrato;
         private System.Windows.Forms.TextBox txtDataNasc_contrato;
         private System.Windows.Forms.TextBox txtNCasa_contrato;
-        private System.Windows.Forms.TextBox txtCpe_contrato;
+        private System.Windows.Forms.TextBox txtCep_contrato;
         private System.Windows.Forms.TextBox txtCpf_contrato;
         private System.Windows.Forms.TextBox txtTelPrincipal_contrato;
         private System.Windows.Forms.TextBox txtTelRecado_contrato;
@@ -422,7 +423,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRG_contrato1;
         private System.Windows.Forms.Label txtRg_contrato;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textComplementoCont;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
