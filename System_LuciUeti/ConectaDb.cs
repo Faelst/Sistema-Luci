@@ -11,9 +11,9 @@ namespace System_LuciUeti
     class ConectaDB
     {
         private string serverName = "localhost";
-        private string port = "5433";               //MUDAR SENHA E O PORT (VARIANDO DE CADA MAQUINA).
+        private string port = "5432";               //MUDAR SENHA E O PORT (VARIANDO DE CADA MAQUINA).
         private string userName = "postgres";
-        private string password = "Rafaelnba";
+        private string password = "postgres";
         private string dataBaseName = "postgres";
 
 

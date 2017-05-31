@@ -66,7 +66,7 @@ namespace System_LuciUeti
             {
                 conexao = new ConectaDB().getConexao();
                 //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
-                string sql = String.Format("SELECT * FROM contratante WHERE nome = '{0}'", nome);
+                string sql = String.Format("SELECT * FROM contratante WHERE nome like '"+ nome+"%'" );
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -75,12 +75,24 @@ namespace System_LuciUeti
                 {
                     cont.id_contratante = Convert.ToUInt16(dr["id"]);
                     cont.nome = dr["nome"].ToString();
+                    cont.nome = dr["nome"].ToString();
+                    cont.id_contratante = Convert.ToInt16(dr["id"]);
+                    cont.email = dr["email"].ToString();
+                    cont.nascimento = Convert.ToDateTime(dr["nascimento"]);
+                    cont.cpf = dr["cpf"].ToString();
+                    cont.rg = dr["rg"].ToString();
+                    cont.endereco = dr["endereco"].ToString();
+                    cont.complemento = dr["complemento"].ToString();
+                    cont.cep = dr["cep"].ToString();
+                    cont.telefone = dr["telefone"].ToString();
+                    cont.tel_recado = dr["tel_recado"].ToString();
+                    cont.ncasa = dr["ncasa"].ToString();
                 }
                 conexao.Close();
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+                throw new Exception("Erro ao procurar o contratante. " + ex.Message);
             }
 
             return cont;

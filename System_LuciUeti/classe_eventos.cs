@@ -61,7 +61,7 @@ namespace System_LuciUeti
             conexao.Close();
         }
 
-        public static List <classe_eventos> buscar()
+        public static List <classe_eventos> buscar(int id_contratante)
         {
 
             List <classe_eventos> eventos = new List <classe_eventos>();
@@ -71,7 +71,14 @@ namespace System_LuciUeti
             {
                 conexao = new ConectaDB().getConexao();
                 //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
-                string sql = "SELECT * FROM evento";
+                string sql;
+                if (id_contratante != 0)
+                {
+                    sql = "SELECT * FROM evento where contratante = '" + id_contratante +"'";
+                } else
+                {
+                    sql = "SELECT * FROM evento";
+                }
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
