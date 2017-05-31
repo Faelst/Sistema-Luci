@@ -28,18 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvContrato = new System.Windows.Forms.DataGridView();
-            this.N_Contratante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel_principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel_recado_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCasa_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvContratante = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,17 +48,28 @@
             this.obs_evemto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContrato)).BeginInit();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.N_Contratante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel_principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel_recado_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCasa_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContratante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_dadosEvento)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvContrato
+            // dgvContratante
             // 
-            this.dgvContrato.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContrato.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvContratante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContratante.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.N_Contratante,
             this.dvgNome,
-            this.data_contrato,
             this.cpf_contrato,
             this.rg_contrato,
             this.tel_principal,
@@ -78,66 +78,11 @@
             this.nCasa_contrato,
             this.email_contrato,
             this.endereco_contrato});
-            this.dgvContrato.Location = new System.Drawing.Point(12, 110);
-            this.dgvContrato.Name = "dgvContrato";
-            this.dgvContrato.Size = new System.Drawing.Size(444, 356);
-            this.dgvContrato.TabIndex = 0;
-            this.dgvContrato.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContrato_CellContentClick);
-            // 
-            // N_Contratante
-            // 
-            this.N_Contratante.HeaderText = "Numero do Contrato";
-            this.N_Contratante.Name = "N_Contratante";
-            // 
-            // dvgNome
-            // 
-            this.dvgNome.HeaderText = "Nome do Contratante";
-            this.dvgNome.Name = "dvgNome";
-            // 
-            // data_contrato
-            // 
-            this.data_contrato.HeaderText = "Data do Contrato";
-            this.data_contrato.Name = "data_contrato";
-            // 
-            // cpf_contrato
-            // 
-            this.cpf_contrato.HeaderText = "CPF do contratante";
-            this.cpf_contrato.Name = "cpf_contrato";
-            // 
-            // rg_contrato
-            // 
-            this.rg_contrato.HeaderText = "RG do contratante";
-            this.rg_contrato.Name = "rg_contrato";
-            // 
-            // tel_principal
-            // 
-            this.tel_principal.HeaderText = "Tel.Principal";
-            this.tel_principal.Name = "tel_principal";
-            // 
-            // tel_recado_contrato
-            // 
-            this.tel_recado_contrato.HeaderText = "tel.Recado";
-            this.tel_recado_contrato.Name = "tel_recado_contrato";
-            // 
-            // cep_contrato
-            // 
-            this.cep_contrato.HeaderText = "CEP";
-            this.cep_contrato.Name = "cep_contrato";
-            // 
-            // nCasa_contrato
-            // 
-            this.nCasa_contrato.HeaderText = "Numero da Casa";
-            this.nCasa_contrato.Name = "nCasa_contrato";
-            // 
-            // email_contrato
-            // 
-            this.email_contrato.HeaderText = "E-mail";
-            this.email_contrato.Name = "email_contrato";
-            // 
-            // endereco_contrato
-            // 
-            this.endereco_contrato.HeaderText = "Endereço";
-            this.endereco_contrato.Name = "endereco_contrato";
+            this.dgvContratante.Location = new System.Drawing.Point(12, 110);
+            this.dgvContratante.Name = "dgvContratante";
+            this.dgvContratante.Size = new System.Drawing.Size(444, 356);
+            this.dgvContratante.TabIndex = 0;
+            this.dgvContratante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContrato_CellContentClick);
             // 
             // textBox1
             // 
@@ -163,7 +108,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(603, 20);
+            this.button1.Location = new System.Drawing.Point(561, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(141, 23);
             this.button1.TabIndex = 3;
@@ -190,7 +135,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(603, 49);
+            this.button2.Location = new System.Drawing.Point(561, 49);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(141, 23);
             this.button2.TabIndex = 6;
@@ -288,11 +233,81 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "DADOS DO EVENTO:";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(744, 49);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(141, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Voltar";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(744, 20);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(141, 23);
+            this.button4.TabIndex = 11;
+            this.button4.Text = "Voltar";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // N_Contratante
+            // 
+            this.N_Contratante.HeaderText = "Numero do Contrato";
+            this.N_Contratante.Name = "N_Contratante";
+            // 
+            // dvgNome
+            // 
+            this.dvgNome.HeaderText = "Nome do Contratante";
+            this.dvgNome.Name = "dvgNome";
+            // 
+            // cpf_contrato
+            // 
+            this.cpf_contrato.HeaderText = "CPF do contratante";
+            this.cpf_contrato.Name = "cpf_contrato";
+            // 
+            // rg_contrato
+            // 
+            this.rg_contrato.HeaderText = "RG do contratante";
+            this.rg_contrato.Name = "rg_contrato";
+            // 
+            // tel_principal
+            // 
+            this.tel_principal.HeaderText = "Tel.Principal";
+            this.tel_principal.Name = "tel_principal";
+            // 
+            // tel_recado_contrato
+            // 
+            this.tel_recado_contrato.HeaderText = "tel.Recado";
+            this.tel_recado_contrato.Name = "tel_recado_contrato";
+            // 
+            // cep_contrato
+            // 
+            this.cep_contrato.HeaderText = "CEP";
+            this.cep_contrato.Name = "cep_contrato";
+            // 
+            // nCasa_contrato
+            // 
+            this.nCasa_contrato.HeaderText = "Numero da Casa";
+            this.nCasa_contrato.Name = "nCasa_contrato";
+            // 
+            // email_contrato
+            // 
+            this.email_contrato.HeaderText = "E-mail";
+            this.email_contrato.Name = "email_contrato";
+            // 
+            // endereco_contrato
+            // 
+            this.endereco_contrato.HeaderText = "Endereço";
+            this.endereco_contrato.Name = "endereco_contrato";
+            // 
             // formFestasCadastradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 478);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dvg_dadosEvento);
@@ -302,10 +317,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dgvContrato);
+            this.Controls.Add(this.dgvContratante);
             this.Name = "formFestasCadastradas";
             this.Text = "formFestasCadastradas";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContrato)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContratante)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_dadosEvento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -314,24 +329,13 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvContrato;
+        private System.Windows.Forms.DataGridView dgvContratante;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn N_Contratante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dvgNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rg_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tel_principal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tel_recado_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cep_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nCasa_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn endereco_contrato;
         private System.Windows.Forms.DataGridView dvg_dadosEvento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_contrato;
@@ -345,5 +349,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valor_total;
         private System.Windows.Forms.DataGridViewTextBoxColumn obs_evemto;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn N_Contratante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvgNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpf_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rg_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tel_principal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tel_recado_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cep_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nCasa_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn endereco_contrato;
     }
 }

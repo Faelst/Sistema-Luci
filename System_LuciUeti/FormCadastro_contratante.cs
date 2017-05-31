@@ -290,14 +290,15 @@ namespace System_LuciUeti
             DateTime nascimento = Convert.ToDateTime(txtDataNasc_contrato.Text);
             string cpf = txtCpf_contrato.Text;
             string rg = txtRG_contrato1.Text;
-            string endereco = txtend_contrato.Text + " Nº " + txtNCasa_contrato.Text;
+            string endereco = txtend_contrato.Text;
             string complemento = textComplementoCont.Text;
             string cep = txtCep_contrato.Text;
             string telefone = txtTelPrincipal_contrato.Text;
             string tel_recado = txtTelRecado_contrato.Text;
+            string ncasa = txtNCasa_contrato.Text;
 
-            Classe_contratante cont = new Classe_contratante(nome, email, nascimento, cpf, rg, endereco, complemento, cep, telefone, tel_recado);
-
+            Classe_contratante cont = new Classe_contratante(nome, email, nascimento, cpf, rg, endereco, complemento, cep, telefone, tel_recado , ncasa);
+            
             cont.save();
         }
 

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Npgsql;
+using NpgsqlTypes;
 
 namespace System_LuciUeti
 {
@@ -37,7 +38,7 @@ namespace System_LuciUeti
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+                throw new Exception("Erro ao logar. " + ex.Message);
             }
 
             return usuario;

@@ -60,6 +60,7 @@ namespace System_LuciUeti
             cmd.ExecuteNonQuery();
             conexao.Close();
         }
+
         public static List <classe_eventos> buscar()
         {
 
