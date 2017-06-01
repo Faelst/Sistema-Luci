@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             this.dgvContratante = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.N_Contratante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpf_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rg_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel_principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tel_recado_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cep_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nCasa_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.endereco_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,18 +58,8 @@
             this.obs_evemto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.N_Contratante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cpf_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rg_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel_principal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel_recado_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cep_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nCasa_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.endereco_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContratante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_dadosEvento)).BeginInit();
             this.SuspendLayout();
@@ -78,19 +78,70 @@
             this.nCasa_contrato,
             this.email_contrato,
             this.endereco_contrato});
-            this.dgvContratante.Location = new System.Drawing.Point(12, 110);
+            this.dgvContratante.Location = new System.Drawing.Point(18, 123);
             this.dgvContratante.Name = "dgvContratante";
             this.dgvContratante.Size = new System.Drawing.Size(444, 356);
             this.dgvContratante.TabIndex = 0;
             this.dgvContratante.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContrato_CellContentClick);
+            this.dgvContratante.SelectionChanged += new System.EventHandler(this.dgvContratante_SelectionChanged);
             // 
-            // textBox1
+            // N_Contratante
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 49);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(366, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.N_Contratante.HeaderText = "Numero do Contrato";
+            this.N_Contratante.Name = "N_Contratante";
+            // 
+            // dvgNome
+            // 
+            this.dvgNome.HeaderText = "Nome do Contratante";
+            this.dvgNome.Name = "dvgNome";
+            // 
+            // cpf_contrato
+            // 
+            this.cpf_contrato.HeaderText = "CPF do contratante";
+            this.cpf_contrato.Name = "cpf_contrato";
+            // 
+            // rg_contrato
+            // 
+            this.rg_contrato.HeaderText = "RG do contratante";
+            this.rg_contrato.Name = "rg_contrato";
+            // 
+            // tel_principal
+            // 
+            this.tel_principal.HeaderText = "Tel.Principal";
+            this.tel_principal.Name = "tel_principal";
+            // 
+            // tel_recado_contrato
+            // 
+            this.tel_recado_contrato.HeaderText = "tel.Recado";
+            this.tel_recado_contrato.Name = "tel_recado_contrato";
+            // 
+            // cep_contrato
+            // 
+            this.cep_contrato.HeaderText = "CEP";
+            this.cep_contrato.Name = "cep_contrato";
+            // 
+            // nCasa_contrato
+            // 
+            this.nCasa_contrato.HeaderText = "Numero da Casa";
+            this.nCasa_contrato.Name = "nCasa_contrato";
+            // 
+            // email_contrato
+            // 
+            this.email_contrato.HeaderText = "E-mail";
+            this.email_contrato.Name = "email_contrato";
+            // 
+            // endereco_contrato
+            // 
+            this.endereco_contrato.HeaderText = "Endereço";
+            this.endereco_contrato.Name = "endereco_contrato";
+            // 
+            // txtPesquisar
+            // 
+            this.txtPesquisar.Location = new System.Drawing.Point(15, 36);
+            this.txtPesquisar.Name = "txtPesquisar";
+            this.txtPesquisar.Size = new System.Drawing.Size(316, 20);
+            this.txtPesquisar.TabIndex = 1;
+            this.txtPesquisar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // comboBox1
             // 
@@ -101,24 +152,25 @@
             "15 anos",
             "Almoço/Jantar",
             "Outros"});
-            this.comboBox1.Location = new System.Drawing.Point(410, 47);
+            this.comboBox1.Location = new System.Drawing.Point(337, 35);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(125, 21);
             this.comboBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(561, 20);
+            this.button1.Location = new System.Drawing.Point(337, 62);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 23);
+            this.button1.Size = new System.Drawing.Size(125, 26);
             this.button1.TabIndex = 3;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 30);
+            this.label1.Location = new System.Drawing.Point(16, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 4;
@@ -127,7 +179,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(407, 30);
+            this.label2.Location = new System.Drawing.Point(334, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(31, 13);
             this.label2.TabIndex = 5;
@@ -135,9 +187,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(561, 49);
+            this.button2.Location = new System.Drawing.Point(839, 21);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 23);
+            this.button2.Size = new System.Drawing.Size(136, 49);
             this.button2.TabIndex = 6;
             this.button2.Text = "Voltar";
             this.button2.UseVisualStyleBackColor = true;
@@ -157,7 +209,7 @@
             this.Valor_pessoa,
             this.valor_total,
             this.obs_evemto});
-            this.dvg_dadosEvento.Location = new System.Drawing.Point(525, 110);
+            this.dvg_dadosEvento.Location = new System.Drawing.Point(531, 123);
             this.dvg_dadosEvento.Name = "dvg_dadosEvento";
             this.dvg_dadosEvento.Size = new System.Drawing.Size(444, 356);
             this.dvg_dadosEvento.TabIndex = 7;
@@ -216,7 +268,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 91);
+            this.label3.Location = new System.Drawing.Point(18, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(209, 16);
             this.label3.TabIndex = 8;
@@ -227,87 +279,39 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(522, 91);
+            this.label4.Location = new System.Drawing.Point(528, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 16);
             this.label4.TabIndex = 9;
             this.label4.Text = "DADOS DO EVENTO:";
             // 
-            // button3
+            // btnAtualizar
             // 
-            this.button3.Location = new System.Drawing.Point(744, 49);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Voltar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Location = new System.Drawing.Point(483, 30);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(109, 26);
+            this.btnAtualizar.TabIndex = 10;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // button4
+            // btnExcluir
             // 
-            this.button4.Location = new System.Drawing.Point(744, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 23);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Voltar";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // N_Contratante
-            // 
-            this.N_Contratante.HeaderText = "Numero do Contrato";
-            this.N_Contratante.Name = "N_Contratante";
-            // 
-            // dvgNome
-            // 
-            this.dvgNome.HeaderText = "Nome do Contratante";
-            this.dvgNome.Name = "dvgNome";
-            // 
-            // cpf_contrato
-            // 
-            this.cpf_contrato.HeaderText = "CPF do contratante";
-            this.cpf_contrato.Name = "cpf_contrato";
-            // 
-            // rg_contrato
-            // 
-            this.rg_contrato.HeaderText = "RG do contratante";
-            this.rg_contrato.Name = "rg_contrato";
-            // 
-            // tel_principal
-            // 
-            this.tel_principal.HeaderText = "Tel.Principal";
-            this.tel_principal.Name = "tel_principal";
-            // 
-            // tel_recado_contrato
-            // 
-            this.tel_recado_contrato.HeaderText = "tel.Recado";
-            this.tel_recado_contrato.Name = "tel_recado_contrato";
-            // 
-            // cep_contrato
-            // 
-            this.cep_contrato.HeaderText = "CEP";
-            this.cep_contrato.Name = "cep_contrato";
-            // 
-            // nCasa_contrato
-            // 
-            this.nCasa_contrato.HeaderText = "Numero da Casa";
-            this.nCasa_contrato.Name = "nCasa_contrato";
-            // 
-            // email_contrato
-            // 
-            this.email_contrato.HeaderText = "E-mail";
-            this.email_contrato.Name = "email_contrato";
-            // 
-            // endereco_contrato
-            // 
-            this.endereco_contrato.HeaderText = "Endereço";
-            this.endereco_contrato.Name = "endereco_contrato";
+            this.btnExcluir.Location = new System.Drawing.Point(598, 31);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(94, 26);
+            this.btnExcluir.TabIndex = 11;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // formFestasCadastradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(987, 478);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(987, 491);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dvg_dadosEvento);
@@ -316,7 +320,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.dgvContratante);
             this.Name = "formFestasCadastradas";
             this.Text = "formFestasCadastradas";
@@ -330,7 +334,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvContratante;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
@@ -349,8 +353,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valor_total;
         private System.Windows.Forms.DataGridViewTextBoxColumn obs_evemto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.DataGridViewTextBoxColumn N_Contratante;
         private System.Windows.Forms.DataGridViewTextBoxColumn dvgNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpf_contrato;

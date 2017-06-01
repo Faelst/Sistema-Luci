@@ -43,30 +43,53 @@ namespace System_LuciUeti
             this.ncasa = ncasa;
         }
 
-        public void save ()
+        public void save()
         {
             Classe_usuario usuario = new Classe_usuario();
             NpgsqlConnection conexao = null;
             conexao = new ConectaDB().getConexao();
             //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
             string sql = "INSERT INTO contratante (nome, email, nascimento, cpf, rg, endereco, complemento, cep, telefone, tel_recado, ncasa) " +
-                String.Format("values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}' , '{10}')", 
-                this.nome, this.email, this.nascimento.ToString("yyyy-MM-dd"), this.cpf, this.rg, this.endereco, this.complemento, this.cep, this.telefone, this.tel_recado ,this.ncasa);
+                String.Format("values ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}' , '{10}')",
+                this.nome, this.email, this.nascimento.ToString("yyyy-MM-dd"), this.cpf, this.rg, this.endereco, this.complemento, this.cep, this.telefone, this.tel_recado, this.ncasa);
 
             NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
             cmd.ExecuteNonQuery();
             conexao.Close();
+
         }
 
-        public static Classe_contratante busca (string nome)
+        public void deletar()
         {
+            string nome_selecionado = "Rafael Augusto Silverio";
+            try
+            {
+                NpgsqlConnection conexao = null;
+                conexao = new ConectaDB().getConexao();
+                //string sql = "SELECT * FROM usuario( WHERE nome = '" + nome + "' and senha = '" + senha + "'";
+                string sql = string.Format("delete from contratante where nome = 'Rafael Augusto Silverio'");
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao procurar o contratante. " + ex.Message);
+            }
+
+        }
+
+
+        public static Classe_contratante busca (string nome)
+        { 
+            
             Classe_contratante cont = new Classe_contratante();
             NpgsqlConnection conexao = null;
             try
             {
                 conexao = new ConectaDB().getConexao();
                 //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
-                string sql = String.Format("SELECT * FROM contratante WHERE nome = '{0}'", nome);
+                string sql = String.Format("SELECT * FROM contratante WHERE nome like '" + nome+"%'");
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -75,12 +98,24 @@ namespace System_LuciUeti
                 {
                     cont.id_contratante = Convert.ToUInt16(dr["id"]);
                     cont.nome = dr["nome"].ToString();
+                    cont.nome = dr["nome"].ToString();
+                    cont.id_contratante = Convert.ToInt16(dr["id"]);
+                    cont.email = dr["email"].ToString();
+                    cont.nascimento = Convert.ToDateTime(dr["nascimento"]);
+                    cont.cpf = dr["cpf"].ToString();
+                    cont.rg = dr["rg"].ToString();
+                    cont.endereco = dr["endereco"].ToString();
+                    cont.complemento = dr["complemento"].ToString();
+                    cont.cep = dr["cep"].ToString();
+                    cont.telefone = dr["telefone"].ToString();
+                    cont.tel_recado = dr["tel_recado"].ToString();
+                    cont.ncasa = dr["ncasa"].ToString();
                 }
                 conexao.Close();
             }
             catch (Exception ex)
             {
-                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+                throw new Exception("Erro ao procurar o contratante. " + ex.Message);
             }
 
             return cont;
@@ -97,7 +132,7 @@ namespace System_LuciUeti
             {
                 conexao = new ConectaDB().getConexao();
                 //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
-                string sql = "SELECT * FROM contratante";
+                string sql = String.Format("SELECT * FROM contratante");
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
                 NpgsqlDataReader dr = cmd.ExecuteReader();
@@ -125,9 +160,9 @@ namespace System_LuciUeti
                 conexao.Close();
             }
             catch (Exception ex)
-            {
-                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+            {throw new Exception("Erro ao listar veiculos. " + ex.Message);
             }
+                
 
             return contratantes;
         }

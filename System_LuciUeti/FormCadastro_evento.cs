@@ -17,6 +17,12 @@ namespace System_LuciUeti
             InitializeComponent();
         }
 
+        public FormCadastro_evento(int contratante)
+        {
+            InitializeComponent();
+            txtIdCliente.Text = contratante.ToString();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             string nomeCliente = textPequisaNomeCliente.Text;

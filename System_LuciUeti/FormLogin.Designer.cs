@@ -55,9 +55,9 @@ namespace System_LuciUeti
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Location = new System.Drawing.Point(153, 209);
+            this.btnEntrar.Location = new System.Drawing.Point(151, 209);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(75, 23);
+            this.btnEntrar.Size = new System.Drawing.Size(77, 23);
             this.btnEntrar.TabIndex = 14;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
