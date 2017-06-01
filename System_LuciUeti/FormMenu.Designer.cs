@@ -42,7 +42,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 234);
+            this.button6.Location = new System.Drawing.Point(12, 314);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(229, 25);
             this.button6.TabIndex = 11;
@@ -51,7 +51,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 265);
+            this.button4.Location = new System.Drawing.Point(12, 203);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(229, 25);
             this.button4.TabIndex = 9;
@@ -60,7 +60,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 203);
+            this.button3.Location = new System.Drawing.Point(12, 296);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(229, 25);
             this.button3.TabIndex = 8;
@@ -123,7 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(257, 299);
+            this.ClientSize = new System.Drawing.Size(257, 237);
             this.Controls.Add(this.btnCadContratante);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);

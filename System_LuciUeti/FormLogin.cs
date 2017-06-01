@@ -21,9 +21,17 @@ namespace System_LuciUeti
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             Classe_usuario usuario = Classe_usuario.Logar(boxUsuario.Text, boxSenha.Text);
-            this.Hide();
-            FormMenu ss = new FormMenu();
-            ss.Show();
+
+            if (usuario.id_usuario != 0)
+            {
+                this.Hide();
+                FormMenu ss = new FormMenu();
+                ss.Show();
+            } else
+            {
+                MessageBox.Show("Error");
+            }
+
         }
     }
 }
