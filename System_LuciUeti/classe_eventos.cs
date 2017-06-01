@@ -44,6 +44,23 @@ namespace System_LuciUeti
             this.data_evento = data_evento;
             this.contratante = contratante;
         }
+        public classe_eventos(int id, string nome, string tipo_evento, DateTime horario_inicio, DateTime horario_termino, string obs, double valor_pessoa,
+                                double valor_total, DateTime data_contrato, DateTime data_evento, int contratante, int qtde_convidados)
+        {
+            this.id = id;
+            this.nome = nome;
+            this.tipo_evento = tipo_evento;
+            this.horario_inicio = horario_inicio;
+            this.horario_termino = horario_termino;
+            this.obs = obs;
+            this.qtde_convidados = qtde_convidados;
+            this.valor_pessoa = valor_pessoa;
+            this.valor_total = valor_total;
+            this.data_contrato = data_contrato;
+            this.data_evento = data_evento;
+            this.contratante = contratante;
+        }
+
 
         public void save()
         {
@@ -61,7 +78,41 @@ namespace System_LuciUeti
             conexao.Close();
         }
 
-        public static List <classe_eventos> buscar(int id_contratante)
+        public void excluir()
+        {
+            NpgsqlConnection conexao = null;
+            try
+            {
+                conexao = new ConectaDB().getConexao();
+                string sql = "delete from evento where id = '" + this.id.ToString() + "'";
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+            }
+        }
+
+        public void atualizar()
+        {
+            NpgsqlConnection conexao = null;
+            try
+            {
+                conexao = new ConectaDB().getConexao();
+                string sql = "update evento set nome = '" + this.nome + "' where id = '" + this.id.ToString() + "'";
+                NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);
+                cmd.ExecuteNonQuery();
+                conexao.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao listar veiculos. " + ex.Message);
+            }
+        }
+
+        public static List <classe_eventos> buscar(int id_contratante, int id_evento)
         {
 
             List <classe_eventos> eventos = new List <classe_eventos>();
@@ -72,12 +123,12 @@ namespace System_LuciUeti
                 conexao = new ConectaDB().getConexao();
                 //string sql = "SELECT * FROM usuario WHERE nome = '" + nome + "' and senha = '" + senha + "'";
                 string sql;
-                if (id_contratante != 0)
+                if (id_contratante != 0 && id_evento == 0)
                 {
                     sql = "SELECT * FROM evento where contratante = '" + id_contratante +"'";
                 } else
                 {
-                    sql = "SELECT * FROM evento";
+                    sql = "SELECT * FROM evento where id = '" + id_evento + "'";
                 }
 
                 NpgsqlCommand cmd = new NpgsqlCommand(sql, conexao);

@@ -57,7 +57,6 @@
             this.textComplementoCont = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -181,6 +180,7 @@
             // 
             // txtNumero_contrato
             // 
+            this.txtNumero_contrato.Enabled = false;
             this.txtNumero_contrato.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumero_contrato.Location = new System.Drawing.Point(26, 53);
             this.txtNumero_contrato.Name = "txtNumero_contrato";
@@ -316,21 +316,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(693, 122);
+            this.button1.Location = new System.Drawing.Point(693, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 47);
             this.button1.TabIndex = 95;
             this.button1.Text = "Limpar";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(693, 184);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 47);
-            this.button2.TabIndex = 92;
-            this.button2.Text = "Imprimir";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -359,7 +350,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(826, 386);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label19);
@@ -426,7 +416,6 @@
         private System.Windows.Forms.TextBox textComplementoCont;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
     }

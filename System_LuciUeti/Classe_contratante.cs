@@ -160,7 +160,8 @@ namespace System_LuciUeti
                 conexao.Close();
             }
             catch (Exception ex)
-            {throw new Exception("Erro ao listar veiculos. " + ex.Message);
+            {
+                throw new Exception("Erro ao listar veiculos. " + ex.Message);
             }
                 
 

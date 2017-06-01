@@ -46,6 +46,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dvg_dadosEvento = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome_evento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date_contrato = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,6 +61,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContratante)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvg_dadosEvento)).BeginInit();
             this.SuspendLayout();
@@ -199,6 +201,7 @@
             // 
             this.dvg_dadosEvento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvg_dadosEvento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Numero_contrato,
             this.Nome_evento,
             this.Date_contrato,
@@ -213,6 +216,11 @@
             this.dvg_dadosEvento.Name = "dvg_dadosEvento";
             this.dvg_dadosEvento.Size = new System.Drawing.Size(444, 356);
             this.dvg_dadosEvento.TabIndex = 7;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
             // 
             // Numero_contrato
             // 
@@ -297,19 +305,30 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(598, 31);
+            this.btnExcluir.Location = new System.Drawing.Point(809, 85);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(94, 26);
+            this.btnExcluir.Size = new System.Drawing.Size(73, 26);
             this.btnExcluir.TabIndex = 11;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(728, 85);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 26);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "Editar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // formFestasCadastradas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(987, 491);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.label4);
@@ -342,16 +361,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView dvg_dadosEvento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome_evento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date_contrato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Evento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario_inicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Horario_termino;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_convidados;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_pessoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor_total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn obs_evemto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnExcluir;
@@ -365,5 +374,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nCasa_contrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn email_contrato;
         private System.Windows.Forms.DataGridViewTextBoxColumn endereco_contrato;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome_evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_contrato;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Evento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Horario_inicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Horario_termino;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero_convidados;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor_pessoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor_total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn obs_evemto;
     }
 }

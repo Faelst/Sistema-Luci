@@ -55,8 +55,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNomeDoEvento_contrato = new System.Windows.Forms.TextBox();
-            this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnSavar = new System.Windows.Forms.Button();
             this.textPequisaNomeCliente = new System.Windows.Forms.TextBox();
@@ -70,6 +68,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtMinutoInicio = new System.Windows.Forms.TextBox();
             this.txtMinutoTermino_contrato = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.txtIdEvento = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label20
@@ -89,6 +90,7 @@
             this.textNumConvidados.Name = "textNumConvidados";
             this.textNumConvidados.Size = new System.Drawing.Size(103, 20);
             this.textNumConvidados.TabIndex = 117;
+            this.textNumConvidados.Text = "1";
             // 
             // dateDataDoContrato_contrato
             // 
@@ -115,7 +117,7 @@
             this.txtHorarioTermino_contrato.Name = "txtHorarioTermino_contrato";
             this.txtHorarioTermino_contrato.Size = new System.Drawing.Size(43, 20);
             this.txtHorarioTermino_contrato.TabIndex = 113;
-            this.txtHorarioTermino_contrato.Text = "__ : __";
+            this.txtHorarioTermino_contrato.Text = "0";
             // 
             // label27
             // 
@@ -163,6 +165,7 @@
             this.textValorTotal.Name = "textValorTotal";
             this.textValorTotal.Size = new System.Drawing.Size(99, 20);
             this.textValorTotal.TabIndex = 102;
+            this.textValorTotal.Text = "1";
             // 
             // label24
             // 
@@ -191,6 +194,7 @@
             this.txtValorPessoa_contrato.Name = "txtValorPessoa_contrato";
             this.txtValorPessoa_contrato.Size = new System.Drawing.Size(99, 20);
             this.txtValorPessoa_contrato.TabIndex = 101;
+            this.txtValorPessoa_contrato.Text = "1";
             this.txtValorPessoa_contrato.TextChanged += new System.EventHandler(this.txtValorPessoa_contrato_TextChanged);
             // 
             // label22
@@ -230,7 +234,7 @@
             this.txtHorarioInicio.Name = "txtHorarioInicio";
             this.txtHorarioInicio.Size = new System.Drawing.Size(44, 20);
             this.txtHorarioInicio.TabIndex = 108;
-            this.txtHorarioInicio.Text = "__ : __";
+            this.txtHorarioInicio.Text = "0";
             // 
             // label18
             // 
@@ -319,24 +323,6 @@
             this.txtNomeDoEvento_contrato.Name = "txtNomeDoEvento_contrato";
             this.txtNomeDoEvento_contrato.Size = new System.Drawing.Size(608, 20);
             this.txtNomeDoEvento_contrato.TabIndex = 94;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(661, 274);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(121, 47);
-            this.btnLimpar.TabIndex = 121;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Location = new System.Drawing.Point(661, 336);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(121, 47);
-            this.btnImprimir.TabIndex = 118;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // btnVoltar
             // 
@@ -450,7 +436,7 @@
             this.txtMinutoInicio.Name = "txtMinutoInicio";
             this.txtMinutoInicio.Size = new System.Drawing.Size(44, 20);
             this.txtMinutoInicio.TabIndex = 131;
-            this.txtMinutoInicio.Text = "__ : __";
+            this.txtMinutoInicio.Text = "0";
             // 
             // txtMinutoTermino_contrato
             // 
@@ -459,13 +445,43 @@
             this.txtMinutoTermino_contrato.Name = "txtMinutoTermino_contrato";
             this.txtMinutoTermino_contrato.Size = new System.Drawing.Size(43, 20);
             this.txtMinutoTermino_contrato.TabIndex = 132;
-            this.txtMinutoTermino_contrato.Text = "__ : __";
+            this.txtMinutoTermino_contrato.Text = "0";
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(661, 340);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(121, 51);
+            this.btnUpdate.TabIndex = 134;
+            this.btnUpdate.Text = "Atualizar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtIdEvento
+            // 
+            this.txtIdEvento.Location = new System.Drawing.Point(549, 139);
+            this.txtIdEvento.Name = "txtIdEvento";
+            this.txtIdEvento.Size = new System.Drawing.Size(100, 20);
+            this.txtIdEvento.TabIndex = 135;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(546, 123);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(66, 13);
+            this.label7.TabIndex = 136;
+            this.label7.Text = "Id Evento:";
             // 
             // FormCadastro_evento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(790, 519);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtIdEvento);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.txtMinutoTermino_contrato);
             this.Controls.Add(this.txtMinutoInicio);
             this.Controls.Add(this.label6);
@@ -477,8 +493,6 @@
             this.Controls.Add(this.txtNomeCliente);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textPequisaNomeCliente);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnImprimir);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnSavar);
             this.Controls.Add(this.label20);
@@ -542,8 +556,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNomeDoEvento_contrato;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnSavar;
         private System.Windows.Forms.TextBox textPequisaNomeCliente;
@@ -557,5 +569,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtMinutoInicio;
         private System.Windows.Forms.TextBox txtMinutoTermino_contrato;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.TextBox txtIdEvento;
+        private System.Windows.Forms.Label label7;
     }
 }

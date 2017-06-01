@@ -126,11 +126,12 @@ namespace System_LuciUeti
             {
                 dvg_dadosEvento.Rows.Clear();
 
-                List<classe_eventos> eventos = classe_eventos.buscar(Convert.ToInt16(dgvContratante.SelectedRows[0].Cells[0].Value));
+                List<classe_eventos> eventos = classe_eventos.buscar(Convert.ToInt16(dgvContratante.SelectedRows[0].Cells[0].Value), 0);
                 for (int i = 0; i < eventos.Count; i++)
                 {
 
                     string[] nova_linha = {
+                    eventos[i].id.ToString(),
                     eventos[i].contratante.ToString(),
                     eventos[i].nome,
                     eventos[i].data_contrato.ToString(),
@@ -139,10 +140,14 @@ namespace System_LuciUeti
                     dvg_dadosEvento.Rows.Add(nova_linha);
                 }
             }
-            dvg_dadosEvento.ClearSelection();
         }
 
         private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            this.atualizarView();
+        }
+
+        public void atualizarView()
         {
             dgvContratante.Rows.Clear();
             formFestasCadastradas.contratantes_carregados = Classe_contratante.carregar();
@@ -172,20 +177,32 @@ namespace System_LuciUeti
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            DataGridViewRow linha = dgvContratante.CurrentRow;
-            string id_selecionado = dgvContratante[0, 0].Value.ToString();
-            dgvContratante.Rows.Remove(linha);
-           
-            MessageBox.Show(id_selecionado.ToString());
+            classe_eventos evento = classe_eventos.buscar(0, Convert.ToUInt16(dvg_dadosEvento.SelectedRows[0].Cells[0].Value))[0];
+            evento.excluir();
 
-            
-            
+            dvg_dadosEvento.Rows.Clear();
 
+            List<classe_eventos> eventos = classe_eventos.buscar(Convert.ToInt16(dgvContratante.SelectedRows[0].Cells[0].Value), 0);
+            for (int i = 0; i < eventos.Count; i++)
+            {
 
-            
-            Classe_contratante cont = new Classe_contratante();
+                string[] nova_linha = {
+                    eventos[i].id.ToString(),
+                    eventos[i].contratante.ToString(),
+                    eventos[i].nome,
+                    eventos[i].data_contrato.ToString(),
+                    eventos[i].tipo_evento
+                };
+                dvg_dadosEvento.Rows.Add(nova_linha);
+            }
+        }
 
-            cont.deletar();
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int id_contratante = Convert.ToInt16(dvg_dadosEvento.SelectedRows[0].Cells[0].Value.ToString());
+            this.Hide();
+            FormCadastro_evento ss = new FormCadastro_evento(id_contratante);
+            ss.Show();
         }
     }
 }

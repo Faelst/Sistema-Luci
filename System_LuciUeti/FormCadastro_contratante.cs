@@ -298,7 +298,8 @@ namespace System_LuciUeti
             string ncasa = txtNCasa_contrato.Text;
 
             Classe_contratante cont = new Classe_contratante(nome, email, nascimento, cpf, rg, endereco, complemento, cep, telefone, tel_recado , ncasa);
-            
+
+            MessageBox.Show("Salvo com sucesso!");
             cont.save();
         }
 
